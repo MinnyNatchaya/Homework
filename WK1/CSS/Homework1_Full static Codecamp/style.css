@@ -147,6 +147,7 @@
   .about_boxes {
     /* margin-top: 20px; */
     margin: 0 center;
+    height: 65vh;
   }
   
   .about_box1 {
