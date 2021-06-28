@@ -103,6 +103,8 @@
 
 // calculateFootball(2,2,5);
 
+/////////////// ย่ออีก ///////////////////
+// const calculateFootball = (win,draw) => win*3 + draw;
 
 
 //Lab3.9
@@ -118,10 +120,16 @@
 //     }else{
 //       return false;
 //     }
-// }
+// };
 
 // console.log(checkleapyear(prompt('Input year: ')));
 
+////////////////ย่ออีก//////////////////////////////////////
+// const checkleapyear= year => {
+//         if(year%100 === 0){
+//             return year % 400 === 0 ;
+//         }return year % 4 === 0;
+// };
 
 
 
@@ -135,10 +143,23 @@
 
 // alert(calAge());
 
+////////////////ย่ออีก คิดวันด้วย///////////////////////////////
+// const calAge = birthYear => {
+//     let day = 0;
+//     for(let i = birthYear; i <= 2020; i++){
+//         day += isLeapYear(i) ? 366 : 365;
+//     }
+//     return day;
+// };
+
+// console.log(calAge(2020));
+
 
 //Lab3.11
 // const calTemperature = (temperature) => (temperature-32)*(5/9);
 // console.log(calTemperature(1));
+
+
 
 
 //Lab3.12
@@ -151,6 +172,22 @@
 
 //   return sum;
 
-// }
+// };
 // console.log(calFactorial(5));
 
+/////////////////อีกแบบ 1//////////////////////////////
+// const calFactorial = num => {
+//     let result = 1;
+//     for(let i=n; i>0; i--){
+//         result *= i;
+//     }
+//     return result; 
+// };
+// console.log(calFactorial(5));
+
+/////////////////อีกแบบ 2 เรียกใช้ตัวเอง//////////////////////////////
+// const calFactorial = num => {
+//     if(n === 1 || n === 0) return 1;
+//     return n*calFactorial(n-1)
+// };
+// console.log(calFactorial(5));

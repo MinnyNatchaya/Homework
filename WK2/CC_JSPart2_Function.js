@@ -35,60 +35,22 @@
 // login(prompt('Enter username:'),prompt('Enter password:'));
 
 
+
 //Lab1.9
-//-------------1.9.1
-// let j;
-// let num;
-// let isPrimeNum;
+/////////////////เฉลย///////////////////
 
-// function prime(num){
-
-//     isPrimeNum = true;
-
-//     for(j = 2; j <= num; j++){
-        
-//         if(num%j === 0 && num !== j){
-//             isPrimeNum = false;
-//         }
+// function isPrime(num){
+//     for(let i = 2; i <= num; i++){
+//         if(num%j === 0) return true;
 //     }
-
-//     if(isPrimeNum === true && num !== 1){
-//         return alert('Is a prime');
-//     }return alert('Is a not prime');
-    
+//     return false
 // }
 
-// prime(+prompt('Input num: '));
-
-//-------------1.9.2
-
-// let j;
-// let num;
-// let isPrimeNum;
-// let i;
-
-// function prime(num){
-//     num = +prompt('Input num: ');
-
-//     for(i = 2; i <= num; i++){
-
-//         isPrimeNum = true;
-
-//         for(j = 2; j <= i ; j++){
-    
-//             if(i % j === 0 && i !== j){
-//             isPrimeNum = false;
-//             }
-//         }
-//         if(isPrimeNum === true){
-//             console.log(i);
-//         }
-
+// function logPrimeNumber(number){
+//     for(let i = 2; i <= number; i++){
+//     if(isPrime(i)) console.log(i);
 //     }
 // }
-
-// prime();
-
 
 //Lab1.10
 // function squareNum(num) {
@@ -118,7 +80,7 @@
 //     }
 //   }
 //   console.log(sayHi('John')); // ***Hi John เพราะ John ไปแทน name
-//   console.log(sayHi()); // **** Who are you เพราะ ไม่มีค่าอะไรไปอทน name เลยไม่เข้า if
+//   console.log(sayHi()); // **** Who are you เพราะ ไม่มีค่าอะไรไปอทน name กลายเป็น undefined
 
 
 //Lab12  
@@ -127,7 +89,11 @@
 //     'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
 //   }
   
-//   console.log(getLongText()); // *undefined เพราะ return อยู่คนละบรรทัด
+//   console.log(getLongText()); // *undefined เพราะ return อยู่คนละบรรทัด ถ้าอยากได้ต้องใส่() ครอบ
+//  //ex 
+//  //   return (
+//  //   'Lorem Ipsum is simply dummy text of the printing and typesetting industry.');
+//  // }
 
 //Lab13
 
@@ -149,19 +115,62 @@
 // checkAge();
 
 //13.2
-
-// (age) => age > 18 ? true : confirm('Did parents allow you?');
+// function checkAge(age) {
+//     return age > 18 ? true : confirm('Did parents allow you?');
+// } 
 // checkAge();
 
 //13.3
 
-// (age) => age > 18 || true || confirm('Did parents allow you?');
+// function checkAge(age) {
+//     return age > 18 || confirm('Did parents allow you?');
+// } 
 // checkAge();
 
 
 //Lab14 
 // function max(num1,num2,num3,num4){
-
 //   return console.log(Math.max(num1,num2,num3,num4));
 // }
 // max(7,3,9,2);
+
+/////////////////////วิธี2///////////////////////
+// function max(a,b,c,d){
+//     if(a === undefined){
+//         return;
+//     }else{
+//         if(b === undefined){
+//             return isNumeric(a) ? +a : NaN;
+//         }else{
+//             if(c === undefined){
+//                 return isNumeric(a) && isNumeric(b) ? (a > b ? a : b): NaN;
+//             }else{
+//                 if(d === undefined){
+//                     if(isNumeric(a) && isNumeric(b) && isNumeric(c)){
+//                         if(a>b && a>c) return a;
+//                         return b>c ? b : c;
+//                     }else{
+//                         return NaN;
+//                     }
+//                 }else{
+//                     if(isNumeric(a) && isNumeric(b) && isNumeric(c) && isNumeric(d)){
+//                         if(a>b && a>c && a>d) {return a;}
+//                         else{
+//                             if(a>b && a>c) return a;
+//                             return b>c ? b : c;
+//                         }
+                        
+//                     }else{
+//                         return NaN;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// function isNumeric(number){
+//     return !(!number || number.trim == '')
+// }
+
+// console.log(max(4,7,9,8));

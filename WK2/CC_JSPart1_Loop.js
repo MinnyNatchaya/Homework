@@ -5,7 +5,20 @@
 //     console.log(star)
 //     star = star +"* ";
 // }
+///////////////วิธี2 ใช้ \n////////////////////////
+// let str = '';
 
+// for (let i = 0; i < 4; i++){
+//     for(let j = 0; j < 4; j++){
+//         if(i >= j){
+//             str += '*';
+//         }else{
+//             break;
+//         }  
+//     }
+//     str += '\n';  
+// }
+// console.log(str);
 
 
 //Lab9.7
@@ -14,7 +27,15 @@
 //         console.log(`${i} x ${j} = ${i*j}`);
 //     }
 // }
-
+///////////////ใช้ \n ////////////////////////////////
+// let str = '';
+// for(let i=2; i<13 ;i++){
+//     for(let j=1; j<13;j++){
+//         str += `${i} x ${j} = ${i*j}\n`;
+//     }
+//     str +='\n';
+// }
+// console.log(str);
 
 
 //Lab9.8 
@@ -33,47 +54,76 @@
 // avg = sum/n;
 // console.log(sum);
 // console.log(avg);
+//////////////ย่อ if////////////////////
+// let input = 0;
+// let sum = 0;
+// let avg = 0;
+// let n = 0;
+
+// while(true){
+//     input = prompt('Enter Number: ');
+//     if(+input <=0 || !+input){
+//         break;
+//     }
+
+//     sum += +input;
+//     n++;  
+// }
+// avg = sum/n;
+// console.log('sum = ' + sum);
+// console.log('avg = ' + avg);
+
   
 
 //Lab9.9
-// let numA = +prompt('Input Num: ');
-// let numB;
-// let i = 0;
+// let correctNumber = prompt('Enter correct number');
+// if(!isNumeric(correctNumber)){
+//     alert("You don't enter number");
+// }
 
+// let count = 0;
+// while(1){
+//     let guessNumber = prompt('Guess my number');
+//     if(!isNumeric(guessNumber)){
+//         alert("You don't enter number");
+//         continue; 
+//     }
 
-// if(numA >= 1 && numA <=100){
+//     count++;
 
-//     do{
+//     if(+correctNumber === +guessNumber){
+//         alert(`ยินดีด้วย คุณทายทั้งหมด ${count} ครั้ง`);
+//         break;
+//     }else if(+correctNumber < +guessNumber){
+//         alert('คุณทายค่ามากเกินไป')
+        
+//     }else{
+//         alert('คุณทายค่าน้อยเกินไป')
+//     }
+// }
 
-//         numB = +prompt('Input Ans: ');
-//         i++;
+// function isNumeric(number){
+//     return !(!number || number.trim() === '' || !+number);
+// }
 
-//     }while(numA !== numB)
-
-// }else { alert('Error Num'); }
-
-// alert('Correct!\nทายทั้งหมด ' + i + ' ครั้ง');
 
 
 
 //Lab9.10
-// let j;
-// let i;
-// let prime;
 
-// for(i = 2; i <= 100; i++){
+// for(let i = 2; i <= 100; i++){
 
-//     prime = true;
+//     let prime = true;
 
-//     for(j = 2; j <= i; j++){
+//     for(let j = 2; j < i; j++){
 
-//         if(i % j === 0 && i !== j){
+//         if(i % j === 0){
 //             prime = false;
 //         }
 
 //     }
         
-//     if(prime === true){
+//     if(prime){
 //         console.log(i);
 //     }
     
