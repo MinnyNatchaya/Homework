@@ -1,0 +1,235 @@
+html{
+    font-family:  Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #f0f2f5;
+}
+
+
+/* box */
+.boxes{
+    background: f0f2f5;
+    height: 600px;
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+}
+
+.boxL{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px dashed deepskyblue; */
+    width: 650px;
+
+}
+
+.boxLContainer{
+    /* border: 1px dashed deeppink; */
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width:80%;
+    height: 75%;
+}
+
+
+.boxL h1{
+    font-size: 60px;
+    color: #005ae2;
+    margin:0px;
+}
+
+.boxL p{
+    font-size: 30px;
+    margin:0px;
+}
+
+.boxR{
+    /* border: 1px dashed deeppink; */
+    min-width: 400px;
+    text-align: center;
+}
+
+.boxRWhite{
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 5px 20px 5px lightgray;
+    text-align: center;
+    height: 330px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+
+
+
+input{
+    
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px solid rgb(192, 192, 192);
+    padding: 15px;
+   
+    
+}
+
+.btnLogin{
+    background-color: #005ae2;
+    color: white;
+    font-size: 22px;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+
+.boxR hr{
+    
+    border: 0.1px solid rgb(235, 235, 235);
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.btnCteateAccount{
+    background-color: #42b72a;
+    color: white;
+    font-size: 20px;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+   
+}
+
+.linkForgetPassword{
+    color: #005ae2;
+    display: inline-block;
+    /* margin-block-start: 1em; */
+    text-decoration: none;
+
+}
+
+.linkPage{
+    /* margin-block-start: 1em; */
+    text-decoration: none;
+    /* float: left; */
+    color: black;
+    /* margin-left: 40px; */
+    /* margin-right: 10px; */
+}
+
+.boxR a:hover{
+    text-decoration: underline;
+}
+
+
+/* footer */
+footer{
+    background: white;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.footer_Container{
+    width: 70%;
+    /* border: 1px dashed hotpink; */
+    flex-wrap: nowrap;
+    
+}
+
+
+.footer_Container ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.footer_Container li{
+    color: rgb(151, 151, 151);
+    padding-right: 12px;
+}
+
+.footer_Container li p {
+    margin-block-start: 0;
+    color: rgb(151, 151, 151);
+}
+
+.footer_Container li a{
+    text-decoration: none;
+    color: rgb(151, 151, 151);
+    
+}
+
+.footer_Container li a:hover{
+    text-decoration: underline;
+}
+
+footer{
+    border: hotpink;
+}
+
+.footer_Container > p{
+    color: rgb(151, 151, 151);
+}
+
+
+/* Responsive */
+  
+@media (max-width: 1300px) {
+    .container {
+      width: 100%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .boxes {
+        justify-content: space-between;
+    }
+    .boxL{
+        justify-content: flex-start;
+    }
+
+}
+  
+@media (max-width: 1000px) {
+    .boxes{
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 0;
+        align-items: center;
+        height: 700px;
+    }
+
+    .boxL{
+        margin-bottom: 50px;
+        justify-content: center;
+    }
+    
+    .boxLContainer{
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+
+    
+
+    .footer_Container{
+        width: 100%;
+    }
+}
